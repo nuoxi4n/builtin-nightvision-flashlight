@@ -13,6 +13,7 @@
     <Reference Include="$(DuckovPath)\Duckov_Data\Managed\TeamSoda.*" />
     <Reference Include="$(DuckovPath)\Duckov_Data\Managed\ItemStatsSystem.dll" />
     <Reference Include="$(DuckovPath)\Duckov_Data\Managed\Unity*" />
+    <Reference Include="$(DuckovPath)\Duckov_Data\Managed\UniTask*" />
   </ItemGroup>
 
 </Project>
