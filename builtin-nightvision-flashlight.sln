@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.14.36603.0 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "builtin-nightvision-flashlight", "builtin-nightvision-flashlight\builtin-nightvision-flashlight.csproj", "{56B4F4F2-3B4A-478C-B3AD-22F22694DB8D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "builtin_nightvision_flashlight", "builtin-nightvision-flashlight\builtin_nightvision_flashlight.csproj", "{56B4F4F2-3B4A-478C-B3AD-22F22694DB8D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
