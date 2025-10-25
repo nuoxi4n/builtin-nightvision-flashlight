@@ -26,12 +26,14 @@ namespace builtin_nightvision_flashlight
         }
         void OnDestroy()
         {
+            ResetNightVisionState();
         }
         void OnEnable()
         {
         }
         void OnDisable()
         {
+            ResetNightVisionState();
         }
         private void ToggleFlashlight()
         {
@@ -43,6 +45,7 @@ namespace builtin_nightvision_flashlight
                 speed: -1f,
                 duration: 2f).Forget();
         }
+        // 开关夜视仪
         private void ToggleNightVision()
         {
             var character = CharacterMainControl.Main;
@@ -78,6 +81,25 @@ namespace builtin_nightvision_flashlight
                 {
                     GameManager.NightVision.Refresh();
                 }
+            }
+        }
+        // 重置夜视仪
+        private void ResetNightVisionState()
+        {
+            var character = CharacterMainControl.Main;
+            if (character != null && character.CharacterItem != null)
+            {
+                Stat nightVisionStat = character.CharacterItem.GetStat(NightVisionTypeStatName);
+                if (nightVisionStat != null)
+                {
+                    nightVisionStat.BaseValue = 0;
+                    Debug.Log("Night vision state reset to off on mod disable.");
+                }
+            }
+
+            if (GameManager.NightVision != null)
+            {
+                GameManager.NightVision.Refresh();
             }
         }
     }
